@@ -19,11 +19,17 @@
 LS7366::LS7366(byte chip_select_pin)
 {
 	CS_pin = chip_select_pin;
+}
+
+
+void LS7366::initialize()
+{
 	pinMode(CS_pin,OUTPUT);
 	digitalWrite(CS_pin, HIGH);
 	datawidth = 4; //Datawidth of 4 is the default
 	SPI.begin();
 }
+
 
 void LS7366::clear_mode_register_0()
 {

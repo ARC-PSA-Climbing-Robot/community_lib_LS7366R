@@ -99,6 +99,7 @@ class LS7366
 	void write_data_register(unsigned long val);
 	void load_counter();
 	void load_OTR();
+	void initialize();
   private:
 	byte CS_pin;
 	byte datawidth;
